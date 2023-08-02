@@ -11,6 +11,27 @@ function load_text_according_to_langage(string $lang) {
 
 // component functions
 
+function generate_navigation(string $lang) {
+    $nom_page = get_name_current_page();
+    $trad_all = set_trad_all();
+
+    $code_html = "";
+    foreach ($trad_all["pages-navbar"] as $key => $value) {
+        $code_html .= "<li class=\"nav-item\">";
+        $code_html .= "<a class=\"nav-link" . ($nom_page == $key ? " active" : "") . "\" aria-current=\"page\" href=\"#\">" . $value . "</a>";
+        $code_html .= "</li>";
+    }
+    
+    $btn_html = "";
+    $btn_html .= "<a ". ($lang == "en" ? "style=\"opacity: 0.5;\"" : "onclick=\"change_langage('en');\"") . "><image width=\"35\" src=\"assets/images/icons8-en-96.png\" alt=\"" . $trad_all['btn-langue-en'] . "\" title=\"upd-lang-to-en\"></a>";
+    $btn_html .= "<a ". ($lang == "fr" ? "style=\"opacity: 0.5;\"" : "onclick=\"change_langage('fr');\"") . "><image width=\"35\" src=\"assets/images/icons8-fr-96.png\" alt=\"" . $trad_all['btn-langue-fr'] . "\" title=\"upd-lang-to-fr\"></a>";
+
+    return get_gabarit("main/navigation.html", [
+        "{{NAV-LIST-ITEM}}" => $code_html,
+        "{{NAV-LANG}}" => $btn_html
+    ]);
+}
+
 function create_content_redirection_page() {
     echo get_gabarit('main/page.html', [
         "{{TITRE_PAGE}}" => "Redirection page",
