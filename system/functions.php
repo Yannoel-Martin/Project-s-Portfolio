@@ -1,13 +1,46 @@
 <?php declare(strict_types=1);
 include_once __DIR__ . '/constants.php';
 
+function load_text_according_to_langage(string $lang) {
+    $nom_page = get_name_current_page();
+    include_once __DIR__ . '/langues/' . $lang . '/all.php';
+    if (file_exists($nom_page)) {
+        include_once __DIR__ . '/langues/' . $lang . '/' . $nom_page;
+    }
+}
+
+// component functions
+
 function create_content_redirection_page() {
     echo get_gabarit('main/page.html', [
         "{{TITRE_PAGE}}" => "Redirection page",
-        "{{CONTENU_PAGE}}" => get_gabarit('components/redirection.html', [
+        "{{CONTENU_PAGE}}" => get_gabarit('pages-structure/redirection.html', [
             '{{ADRESSE_SITE}}' => (DEV_MODE_ACTIVE ? ADRESSE_SITE_DEV : ADRESSE_SITE_PROD) . 'accueil.php'
         ])
     ]);
+}
+
+// general functions
+
+function check_langage(): string {
+    if (isset($_GET['lang'])){
+        $lang = $_GET['lang'];
+    } else {
+        $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2); // On detecte la langue du navigateur
+        if ($lang != "fr") {
+            $lang = "en"; // gestion des langues autre que FR / EN
+        }
+    }
+    return $lang;
+}
+
+function get_name_current_page(): string {
+    $url_parts = explode('/', $_SERVER['PHP_SELF']);
+    $nom_page = '';
+    foreach ($url_parts as $url_part) {
+        $nom_page = $url_part;
+    }
+    return $nom_page;
 }
 
 function get_gabarit(string $filename, array $trans = []): string {
@@ -20,19 +53,4 @@ function get_gabarit(string $filename, array $trans = []): string {
         }
     }
     return $code_html;
-}
-
-function load_text_according_to_langage() {
-    // 1. récupération nom de la page
-    $url_parts = explode('/', $_SERVER['PHP_SELF']);
-    $nom_page = '';
-    foreach ($url_parts as $url_part) {
-        $nom_page = $url_part;
-    }
-    // 2. chargement fichier selon nom
-    if (true) {
-        include_once __DIR__ . '/langues/fr/' . $nom_page;
-    } else {
-        include_once __DIR__ . '/langues/en/' . $nom_page;
-    }
 }
