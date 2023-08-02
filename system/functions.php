@@ -3,8 +3,10 @@ include_once __DIR__ . '/constants.php';
 
 function create_content_redirection_page() {
     echo get_gabarit('main/page.html', [
-        "{titre}" => "Redirection page",
-        "{content}" => get_gabarit('components/redirection.html') 
+        "{TITRE_PAGE}" => "Redirection page",
+        "{CONTENU_PAGE}" => get_gabarit('components/redirection.html', [
+            '{{ADRESSE_SITE}}' => (DEV_MODE_ACTIVE ? ADRESSE_SITE_DEV : ADRESSE_SITE_PROD)
+        ]) 
     ]);
 }
 
