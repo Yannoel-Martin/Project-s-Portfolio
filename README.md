@@ -4,18 +4,22 @@ A website created to be a portfolio of all the projects I have created or been i
 
 ## Document Map
 1. [Project details](#project-details)
-1. [Ressource & Tutorial used](#ressource--tutorial-used)
+1. [Ressource used](#ressource-used)
+1. [Tutorial used](#tutorial-used)
 
 ## Project details
-Séparé en deux blocs :
-1. public : contenant ce qui est "front", c'est-à-dire :
-    1. les pages
-    1. les gabarits
-    1. les ressources (images et autres fichiers à charger)
-1. system : contenant ce qyu est "back", c'est-à-dire :
-    1. les fonctions
-    1. les constantes
-    1. les langues (pour les traductions)
+Separated into two blocks:
+1. public : containing what is "front", i.e.:
+    1. pages
+    1. templates
+    1. resources (images and other files to load)
+1. system: containing what is "back", i.e.:
+    1. functions
+    1. constants
+    1. languages ​​(for translations)
 
-## Ressource & Tutorial used
-- [Héberger un site gratuitement sur GitHub en 2023](https://www.youtube.com/watch?v=hNRxn5sKOdE) by [École du Web](https://www.youtube.com/@EcoleduWeb)
+## Ressource used
+- [Bootstrap documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+
+## Tutorial used
+- [YouTube video "Héberger un site gratuitement sur GitHub en 2023"](https://www.youtube.com/watch?v=hNRxn5sKOdE) by [École du Web](https://www.youtube.com/@EcoleduWeb)
