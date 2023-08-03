@@ -5,7 +5,8 @@ function set_trad_all() {
         "btn-langue-fr" => "Change language to French",
         "btn-langue-en" => "Change language to English",
         "pages-navbar" => [
-            "accueil.php" => "Home"
+            "accueil.php" => "Home",
+            "diplome.php" => "Diploma"
         ]
     ];
     return $trad_all;
