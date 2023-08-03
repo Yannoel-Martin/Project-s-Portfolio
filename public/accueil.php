@@ -11,24 +11,12 @@ echo get_gabarit('main/page.html', [
     "{{TITRE_PAGE}}" => $trad_page["title_page"],
     "{{CONTENU_PAGE}}" => get_gabarit('pages-structure/accueil.html', [
         "{{NAVIGATION}}" => generate_navigation($lang),
-        "{{SECTION_INTRO}}" => get_gabarit('main/encart_text_left.html', [
+        "{{SECTION_INTRODUCTION}}" => get_gabarit('main/encart_text_left.html', [
             "{{IMG_CONTENT}}" => generate_image_side_content("nom_image.png"),
             "{{TEXT_CONTENT}}" => get_gabarit('main/section_intro.html', [
                 "{{TITLE_PAGE}}" => $trad_page["title_page"],
                 "{{TITLE_SECTION}}" => $liste_sections["section_intro"]["title_section"]
             ])
-        ]),
-        "{{SECTION_VIOLET_S__JOURNEY}}" => get_gabarit('main/encart_text_right.html', [
-            "{{IMG_CONTENT}}" => generate_image_side_content("background_violet_journey.png"),
-            "{{TEXT_CONTENT}}" => get_gabarit('components/violet_journey.html', [
-                "{{TITLE_SECTION}}" => $liste_sections["violet_journey"]["title_section"],
-                "{{PARAGRAPH_1}}" => $liste_sections["violet_journey"]["paragraph_1"],
-                "{{PARAGRAPH_2}}" => $liste_sections["violet_journey"]["paragraph_2"],
-                "{{PARAGRAPH_3}}" => $liste_sections["violet_journey"]["paragraph_3"],
-                "{{PARAGRAPH_4}}" => $liste_sections["violet_journey"]["paragraph_4"],
-                "{{PARAGRAPH_5}}" => $liste_sections["violet_journey"]["paragraph_5"],
-                "{{TXT_BTN_DL}}" => $liste_sections["violet_journey"]["txt-btn-dl"]
-            ])
-        ]),
+        ])
     ])
 ]);
