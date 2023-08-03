@@ -13,6 +13,10 @@ function load_text_according_to_langage(string $lang) {
 /* component functions */
 /***********************/
 
+function generate_image_side_content(string $nom_image): string {
+    return "<div class=\"image-side\" style=\"background-image: url(assets/images/" . $nom_image . ");\"></div>";
+}
+
 function generate_navigation(string $lang) {
     $nom_page = get_name_current_page();
     $trad_all = set_trad_all();
