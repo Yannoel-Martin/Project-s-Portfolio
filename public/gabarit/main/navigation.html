@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-dark">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
     <div class="container-fluid">
         <!--
         <a class="navbar-brand" href="#">
@@ -10,31 +10,25 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                {{NAV-LIST-ITEM}}
-                <!--
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown link
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-                -->
+        {{NAV-LIST-ITEM}}
+        <!--
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown link
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
-        </div>
-        <div class="navbar-brand">
-            {{NAV-LANG}}
-        </div>
+        </li>
+        -->
+        {{NAV-LANG}}
     </div>
   </nav>
   <div style="height: 61.5px;"></div>
   <script>
-    function change_langage() {
-        
+    function change_langage(lang) {
+        document.location.href="{{ADRESSE_PAGE}}?lang=" + lang; 
     }
   </script>
