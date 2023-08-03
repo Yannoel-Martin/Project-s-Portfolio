@@ -16,25 +16,19 @@ echo get_gabarit('main/page.html', [
     "{{TITRE_PAGE}}" => $trad_page["title_page"],
     "{{CONTENU_PAGE}}" => get_gabarit('pages-structure/diplome.html', [
         "{{NAVIGATION}}" => generate_navigation($lang),
-        "{{SECTION_TITRE_EII}}" => get_gabarit('main/encart_large.html', [
-            "{{CONTENT_ENCART}}" => get_gabarit('main/encart_text_right.html', [
-                "{{IMG_CONTENT}}" => "",
-                "{{TEXT_CONTENT}}" => get_gabarit('components/titre_eii.html', [
-                ])
+        "{{SECTION_TITRE_EII}}" => get_gabarit('main/encart_text_right.html', [
+            "{{IMG_CONTENT}}" => "",
+            "{{TEXT_CONTENT}}" => get_gabarit('components/titre_eii.html', [
             ])
         ]),
-        "{{SECTION_TITRE_CDA}}" => get_gabarit('main/encart_large.html', [
-            "{{CONTENT_ENCART}}" => get_gabarit('main/encart_text_left.html', [
-                "{{IMG_CONTENT}}" => "",
-                "{{TEXT_CONTENT}}" => get_gabarit('components/titre_cda.html', [
-                ])
+        "{{SECTION_TITRE_CDA}}" => get_gabarit('main/encart_text_left.html', [
+            "{{IMG_CONTENT}}" => "",
+            "{{TEXT_CONTENT}}" => get_gabarit('components/titre_cda.html', [
             ])
         ]),
-        "{{SECTION_TITRE_BAC}}" => get_gabarit('main/encart_large.html', [
-            "{{CONTENT_ENCART}}" => get_gabarit('main/encart_text_right.html', [
-                "{{IMG_CONTENT}}" => "",
-                "{{TEXT_CONTENT}}" => get_gabarit('components/titre_bac.html', [
-                ])
+        "{{SECTION_TITRE_BAC}}" => get_gabarit('main/encart_text_right.html', [
+            "{{IMG_CONTENT}}" => "",
+            "{{TEXT_CONTENT}}" => get_gabarit('components/titre_bac.html', [
             ])
         ])
     ])
