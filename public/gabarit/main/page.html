@@ -6,11 +6,33 @@
 
         <!-- BOOTSTRAP CSS -->
         <link href="assets/templates/bootstrap@5.0.2.min.css" rel="stylesheet">
+        <style>
+            * {
+                color: white;
+            }
+            .navbar {
+                background-color: #000058;
+            }
+            .scroller {
+                height: 915px;
+                overflow-y: scroll;
+                scroll-snap-type: y mandatory;
+                background-color: #000033;
+            }
+            .scroller section {
+                height: 854px;
+                padding-top: 73px;
+                margin-bottom: 83px;
+                scroll-snap-align: start;
+            }
+        </style>
 
         <title>{{TITRE_PAGE}}</title>
     </head>
     <body>
-        {{CONTENU_PAGE}}
+        <div class="container-fluid scroller">
+            {{CONTENU_PAGE}}
+        </div>
 
         <!-- BOOTSTRAP JS -->
         <script src="assets/templates/bootstrap@5.0.2.min.js"></script>
