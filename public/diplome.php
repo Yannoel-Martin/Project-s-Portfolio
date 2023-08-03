@@ -20,24 +20,42 @@ echo get_gabarit('main/page.html', [
             ])
         ]),
         "{{SECTION_TITRE_EII}}" => get_gabarit('main/encart_text_right.html', [
-            "{{MIDDLE_SEPARATOR}}" => generate_middle_separator("#654f9d", "red"),
+            "{{MIDDLE_SEPARATOR}}" => generate_middle_separator("#654f9d", "#5000d1"),
             "{{IMG_CONTENT}}" => generate_image_side_content("campus_academy.jpg"),
-            "{{TEXT_CONTENT}}" => get_gabarit('components/diplome/titre_eii.html', [
-                "{{TITLE_SECTION}}" => $liste_sections["titre_eii"]["title_section"]
+            "{{TEXT_CONTENT}}" => get_gabarit('components/title_all.html', [
+                "{{TITLE_SECTION}}" => $liste_sections["titre_eii"]["title_section"],
+                "{{DATE_INFO}}" => $trad_page["date_obtention"],
+                "{{DATE}}" => $liste_sections["titre_eii"]["date"],
+                "{{LIEU_INFO}}" => $trad_page["lieu_obtention"],
+                "{{LIEU}}" => $liste_sections["titre_eii"]["lieu"],
+                "{{SPEC_INFO}}" => $trad_page["spec_obtention"],
+                "{{SPEC}}" => $liste_sections["titre_eii"]["spec"],
             ])
         ]),
         "{{SECTION_TITRE_CDA}}" => get_gabarit('main/encart_text_left.html', [
-            "{{MIDDLE_SEPARATOR}}" => generate_middle_separator("red", "red"),
+            "{{MIDDLE_SEPARATOR}}" => generate_middle_separator("#5000d1", "#dd7a7a"),
             "{{IMG_CONTENT}}" => generate_image_side_content("campus_academy.jpg"),
-            "{{TEXT_CONTENT}}" => get_gabarit('components/diplome/titre_cda.html', [
-                "{{TITLE_SECTION}}" => $liste_sections["titre_cda"]["title_section"]
+            "{{TEXT_CONTENT}}" => get_gabarit('components/title_all.html', [
+                "{{TITLE_SECTION}}" => $liste_sections["titre_cda"]["title_section"],
+                "{{DATE_INFO}}" => $trad_page["date_obtention"],
+                "{{DATE}}" => $liste_sections["titre_cda"]["date"],
+                "{{LIEU_INFO}}" => $trad_page["lieu_obtention"],
+                "{{LIEU}}" => $liste_sections["titre_cda"]["lieu"],
+                "{{SPEC_INFO}}" => $trad_page["spec_obtention"],
+                "{{SPEC}}" => $liste_sections["titre_cda"]["spec"],
             ])
         ]),
         "{{SECTION_TITRE_BAC}}" => get_gabarit('main/encart_text_right.html', [
-            "{{MIDDLE_SEPARATOR}}" => generate_middle_separator("red", "red"),
+            "{{MIDDLE_SEPARATOR}}" => generate_middle_separator("#dd7a7a", "#e96b00"),
             "{{IMG_CONTENT}}" => generate_image_side_content("st_vincent_la_providence.jpg"),
-            "{{TEXT_CONTENT}}" => get_gabarit('components/diplome/titre_bac.html', [
-                "{{TITLE_SECTION}}" => $liste_sections["titre_bac"]["title_section"]
+            "{{TEXT_CONTENT}}" => get_gabarit('components/title_all.html', [
+                "{{TITLE_SECTION}}" => $liste_sections["titre_bac"]["title_section"],
+                "{{DATE_INFO}}" => $trad_page["date_obtention"],
+                "{{DATE}}" => $liste_sections["titre_bac"]["date"],
+                "{{LIEU_INFO}}" => $trad_page["lieu_obtention"],
+                "{{LIEU}}" => $liste_sections["titre_bac"]["lieu"],
+                "{{SPEC_INFO}}" => $trad_page["spec_obtention"],
+                "{{SPEC}}" => $liste_sections["titre_bac"]["spec"],
             ])
         ])
     ])

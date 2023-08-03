@@ -18,6 +18,21 @@ echo get_gabarit('main/page.html', [
                 "{{TITLE_PAGE}}" => $trad_page["title_page"],
                 "{{TITLE_SECTION}}" => $liste_sections["section_intro"]["title_section"]
             ])
+        ]),
+        "{{SECTION_PROJETS}}" => get_gabarit('main/encart_text_right.html', [
+            "{{MIDDLE_SEPARATOR}}" => generate_middle_separator("#654f9d", "#5000d1"),
+            "{{IMG_CONTENT}}" => generate_image_side_content("nom_image.png"),
+            "{{TEXT_CONTENT}}" => "Décrire les projets et renvoyer sur la page dédiée ?"
+        ]),
+        "{{SECTION_DIPLOME}}" => get_gabarit('main/encart_text_left.html', [
+            "{{MIDDLE_SEPARATOR}}" => generate_middle_separator("#5000d1", "#dd7a7a"),
+            "{{IMG_CONTENT}}" => generate_image_side_content("nom_image.png"),
+            "{{TEXT_CONTENT}}" => "Décrire les diplomes et renvoyer sur la page dédiée ?"
+        ]),
+        "{{SECTION_EXPERIENCE}}" => get_gabarit('main/encart_text_right.html', [
+            "{{MIDDLE_SEPARATOR}}" => generate_middle_separator("#dd7a7a", "#e96b00"),
+            "{{IMG_CONTENT}}" => generate_image_side_content("nom_image.png"),
+            "{{TEXT_CONTENT}}" => "Décrire les expériences et renvoyer sur la page dédiée ?"
         ])
     ])
 ]);
