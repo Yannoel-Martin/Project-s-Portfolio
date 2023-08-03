@@ -54,6 +54,22 @@ function create_content_redirection_page() {
     ]);
 }
 
+function generate_middle_separator(string $color_initial, string $color_final): string {
+    $code_html = "";
+    $code_html .= "<div class=\"d-inline-block middle-screen text-center\">";
+    $code_html .= "<div class=\"d-flex justify-content-center\">";
+    $code_html .= "<div class=\"d-flex flex-column\">";
+    $code_html .= "<div class=\"separateur-circle\" style=\"border: 1px solid " . $color_initial . ";\"></div>";
+    $code_html .= "<div class=\"d-flex justify-content-center\">";
+    $code_html .= "<div class=\"separateur\" style=\"background: linear-gradient(" . $color_initial . ", " . $color_final . ");\"></div>";
+    $code_html .= "</div>";
+    $code_html .= "<div class=\"separateur-circle\" style=\"border: 1px solid " . $color_final . ";\"></div>";
+    $code_html .= "</div>";
+    $code_html .= "</div>";
+    $code_html .= "</div>";
+    return $code_html;
+}
+
 /*********************/
 /* general functions */
 /*********************/

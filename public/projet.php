@@ -11,6 +11,7 @@ echo get_gabarit('main/page.html', [
     "{{TITRE_PAGE}}" => $trad_page["title_page"],
     "{{CONTENU_PAGE}}" => get_gabarit('pages-structure/projet.html', [
         "{{SECTION_INTRODUCTION}}" => get_gabarit('main/encart_text_left.html', [
+            "{{MIDDLE_SEPARATOR}}" => generate_middle_separator("#6969ff", "#654f9d"),
             "{{IMG_CONTENT}}" => generate_image_side_content("nom_image.png"),
             "{{TEXT_CONTENT}}" => get_gabarit('main/section_intro.html', [
                 "{{TITLE_PAGE}}" => $trad_page["title_page"],
@@ -18,8 +19,9 @@ echo get_gabarit('main/page.html', [
             ])
         ]),
         "{{SECTION_JeuVideo_VioletsJourney}}" => get_gabarit('main/encart_text_right.html', [
+            "{{MIDDLE_SEPARATOR}}" => generate_middle_separator("#654f9d", "red"),
             "{{IMG_CONTENT}}" => generate_image_side_content("background_violet_journey.png"),
-            "{{TEXT_CONTENT}}" => get_gabarit('components/violet_journey.html', [
+            "{{TEXT_CONTENT}}" => get_gabarit('components/projet/violet_journey.html', [
                 "{{TITLE_SECTION}}" => $liste_sections["violet_journey"]["title_section"],
                 "{{PARAGRAPH_1}}" => $liste_sections["violet_journey"]["paragraph_1"],
                 "{{PARAGRAPH_2}}" => $liste_sections["violet_journey"]["paragraph_2"],

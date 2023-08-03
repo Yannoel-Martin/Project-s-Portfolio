@@ -12,6 +12,7 @@ echo get_gabarit('main/page.html', [
     "{{CONTENU_PAGE}}" => get_gabarit('pages-structure/accueil.html', [
         "{{NAVIGATION}}" => generate_navigation($lang),
         "{{SECTION_INTRODUCTION}}" => get_gabarit('main/encart_text_left.html', [
+            "{{MIDDLE_SEPARATOR}}" => generate_middle_separator("#6969ff", "#654f9d"),
             "{{IMG_CONTENT}}" => generate_image_side_content("nom_image.png"),
             "{{TEXT_CONTENT}}" => get_gabarit('main/section_intro.html', [
                 "{{TITLE_PAGE}}" => $trad_page["title_page"],

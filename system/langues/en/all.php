@@ -6,6 +6,7 @@ function set_trad_all() {
         "btn-langue-en" => "Change language to English",
         "pages-navbar" => [
             "accueil.php" => "Home",
+            "projet.php" => "Project",
             "diplome.php" => "Diploma"
         ]
     ];
