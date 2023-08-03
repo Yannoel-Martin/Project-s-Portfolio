@@ -22,7 +22,7 @@ function generate_navigation(string $lang) {
     $code_html .= "<ul class=\"navbar-nav\">";
     foreach ($trad_all["pages-navbar"] as $key => $value) {
         $code_html .= "<li class=\"nav-item\">";
-        $code_html .= "<a class=\"nav-link" . ($nom_page == $key ? " active" : "") . "\" aria-current=\"page\" href=\"#\">" . $value . "</a>";
+        $code_html .= "<a class=\"nav-link" . ($nom_page == $key ? " active" : "") . "\" aria-current=\"page\" href=\"" . $key . "?lang=" . $lang . "\">" . $value . "</a>";
         $code_html .= "</li>";
     }
     $code_html .= "</ul>";
@@ -36,7 +36,8 @@ function generate_navigation(string $lang) {
 
     return get_gabarit("main/navigation.html", [
         "{{NAV-LIST-ITEM}}" => $code_html,
-        "{{NAV-LANG}}" => $btn_html
+        "{{NAV-LANG}}" => $btn_html,
+        "{{ADRESSE_PAGE}}" => explode('?', $_SERVER['PHP_SELF'])[0]
     ]);
 }
 

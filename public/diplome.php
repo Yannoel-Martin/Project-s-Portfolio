@@ -14,33 +14,30 @@ $code_html_temp .= '<hr>';
 
 echo get_gabarit('main/page.html', [
     "{{TITRE_PAGE}}" => $trad_page["title_page"],
-    "{{CONTENU_PAGE}}" => get_gabarit('pages-structure/accueil.html', [
+    "{{CONTENU_PAGE}}" => get_gabarit('pages-structure/diplome.html', [
         "{{NAVIGATION}}" => generate_navigation($lang),
-        "{{SECTION}}" => get_gabarit('main/encart_large.html', [
-            "{{CONTENT_ENCART}}" => $code_html_temp
-        ]),
-        "{{SECTION_VIOLET_S__JOURNEY}}" => get_gabarit('main/encart_large.html', [
+        "{{SECTION_TITRE_EII}}" => get_gabarit('main/encart_large.html', [
             "{{CONTENT_ENCART}}" => get_gabarit('main/encart_text_right.html', [
-                "{{TEXT_CONTENT}}" => get_gabarit('components/violet_journey.html', [
-                    "{{TEXT_CONTENT}}" => "0 idée de quoi mettre xD",
-                    "{{PICTURE_SIDE}}" => ""
+                "{{TEXT_CONTENT}}" => get_gabarit('components/titre_eii.html', [
                 ]),
                 "{{SRC_PIC}}" => "",
                 "{{ALT_PIC}}" => "",
                 "{{TITLE_PIC}}" => ""
             ])
         ]),
-        "{{SECTION_BIS}}" => get_gabarit('main/encart_large.html', [
+        "{{SECTION_TITRE_CDA}}" => get_gabarit('main/encart_large.html', [
             "{{CONTENT_ENCART}}" => get_gabarit('main/encart_text_left.html', [
-                "{{TEXT_CONTENT}}" => "0 idée de quoi mettre xD",
+                "{{TEXT_CONTENT}}" => get_gabarit('components/titre_cda.html', [
+                ]),
                 "{{SRC_PIC}}" => "",
                 "{{ALT_PIC}}" => "",
                 "{{TITLE_PIC}}" => ""
             ])
         ]),
-        "{{SECTION_TRIS}}" => get_gabarit('main/encart_large.html', [
+        "{{SECTION_TITRE_BAC}}" => get_gabarit('main/encart_large.html', [
             "{{CONTENT_ENCART}}" => get_gabarit('main/encart_text_right.html', [
-                "{{TEXT_CONTENT}}" => "0 idée de quoi mettre xD",
+                "{{TEXT_CONTENT}}" => get_gabarit('components/titre_bac.html', [
+                ]),
                 "{{SRC_PIC}}" => "",
                 "{{ALT_PIC}}" => "",
                 "{{TITLE_PIC}}" => ""
